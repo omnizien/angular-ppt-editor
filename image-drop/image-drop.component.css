@@ -1,0 +1,265 @@
+
+/* .top-container {
+  background: #fff url('data:image/gif;base64,R0lGODlhwAMBAIAAAP/////l5SH5BAAHAP8ALAAAAADAAwEAAAI3hI+hy+0Po2yo2jqz3vJ6zIXi9JXAiKaL+amuyHrvrMUXjUe2lffUnvAJgUFhj3gw+pAG5fFTAAA7') repeat-y center;
+} */
+ 
+
+ 
+/* grid-template-rows: repeat(4, 48.75px); */
+ 
+ 
+ 
+
+
+
+.file-drop-container{
+  
+  position: relative;  
+  /* grid for scaling */
+  /* background: linear-gradient(90deg, rgb(230, 230, 230) 1%, transparent 1%)   0, #fff repeat-y center;
+  background-size: 65px 1px; */
+  
+  
+  background-color: rgb(251, 174, 174);
+  height: 197.5px;
+  width: 480px;     
+  /* width: 60px; */
+  /* height: 60px;   */
+  opacity: 1;
+  /* left: 50%; */
+  /* margin-left: -390px; */
+  margin-bottom: 20px;
+  box-shadow:  40px 40px 40px #cccccc,
+               0 0 0 #ffffff,
+               0 0 0 #cccccc inset,
+               2px 2px 2px #ffffff inset;
+
+               margin-left: 400px;
+
+
+z-index: 4;
+
+   /* animation: anime 1s cubic-bezier(0.16, 1, 0.3, 1); */
+   /* animation: anime-pause .5s  ; */
+  
+ 
+   
+}
+
+ 
+
+.drop-zone {
+
+  position: relative;  
+  background-color: rgb(246, 246, 246);
+border-width: 1px;
+
+opacity: 1;
+  float: left;
+  padding: 10px;
+  height: 90px; 
+  width: 90px;
+  overflow: auto;
+  border: dashed 2px #777;
+  border-radius: 8px; 
+  margin-left:40px;
+  margin-top: 40px;
+  /* alternate */
+  /* animation: opacity1 1.5s cubic-bezier(0.16, 1, 0.3, 1) 1s  ; */
+ 
+}
+
+
+
+@keyframes opacity1 {
+  0% {
+  opacity: 0;}
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }}
+  
+
+.files-list-container {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style:dotted;
+border-radius: 3px;
+border-color: rgb(93, 93, 93);
+float: left;
+  width: 74%;
+/* Should be removed. Only for demonstration */
+  height: 155px;  
+  width: 280px;   
+  overflow: auto;
+  /* box-shadow: 20px -10px teal; */
+  /* margin-left:46px; */
+  /* margin-top: 20px; */
+  /* animation: opacity1 4.5s cubic-bezier(0.16, 1, 0.3, 1) 1s   alternate; */
+ 
+}
+ 
+.drop .content {
+  min-height: 90px;
+  padding-bottom: 0;
+}
+
+ 
+
+.drop-placeholder {
+  color: #404a35;
+  padding: 16px 0;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.drop-heading{
+  margin-left: 325px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.container {
+  width: 70%;
+  height: 30%;
+  padding: 2rem;
+  text-align: center;
+  border: dashed 4px #fdff6c;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 auto;
+}
+.container #imagio {
+  height: 400px;
+  width: 400px;
+}
+.container input {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.container label {
+  color: white;
+  width: 183px;
+  height: 65px;
+  border-radius: 21.5px;
+  background-color: #3620db;
+  padding: 8px 16px;
+}
+.container h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0080ff;
+}
+.fileover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+.files-list {
+  /* margin-top: 1.5rem; */
+}
+.files-list .single-file {
+  display: flex;
+  /* padding: 0.5rem; */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-grow: 1;
+  margin-top: 10px;
+  height: 45px;
+  width: 450px;
+  margin-left: 15px;
+  border: solid .5px #c1c1c1;
+  box-shadow: 0px 0px 1px 1px rgb(201, 201, 201);
+}
+.files-list .single-file .delete {
+  display: flex;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+ 
+}
+.files-list .single-file .name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #007bff;
+  margin: 0;
+  height: 5px;
+  width: 300px;
+  background-color: #cea991;
+  /* overflow:scroll; */
+}
+.files-list .single-file .size {
+  font-size: 12px;
+  font-weight: 500;
+  color: #a4a4a4;
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+.files-list .single-file .info {
+  width: 100%;
+}
+
+
+.button{
+position: absolute;
+width: 100px;
+height: 60px;
+margin-left: 600px;
+}
+
+ 
+  
+
+ 
+
+/* Shake animation */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+
