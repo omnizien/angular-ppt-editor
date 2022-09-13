@@ -1,0 +1,108 @@
+<modal id="text-edit-modal" class={{class}}  (click)="toggle()"  >   
+
+  <!-- show-text-edit -->
+
+  <div class="current-font" id="current-font-id" [style.font-family]="currentFontId" (click)="row_clicked('font')"
+    [ngStyle]="{'border-color': font_clicked == true ?   '#adff2f'   : '#454545'  }">
+       {{currentFontId}} 
+ 
+  </div>
+
+  <!-- [ngStyle]="{'border-color':row1_clicked == true ?   '#adff2f'   : '#454545'  }" -->
+  <div class="row_1" id="current-font-id" (click)="row_clicked('row_1')"
+    [ngStyle]="{'border-color':row1_clicked == true ?   '#adff2f'   : '#454545'  }">
+
+
+    <ul class="_row_1">
+      <li><a href="#contact" style="width:35px; margin-top: -5px; background-color: brown;"><img
+            style="margin-top: 7.5px" id="pbfill" class="active" src="assets/icons/type-bold.svg" /></a></li>
+      <li><a href="#contact" style="width:35px; margin-top: -5px;"><img style="margin-top: 7.5px" id="pbfill"
+            class="active" src="assets/icons/type-italic.svg" /></a></li>
+      <li><a href="#contact" style="width:35px; padding-top: 7.5px; margin-top: -5px;"><img id="pbfill" class="active"
+            src="assets/icons/type-underline.svg" /></a></li>
+      <li><a href="#contact" style="width:35px; padding-top: 7.5px; margin-top: -5px;"><img id="pbfill" class="active"
+            src="assets/icons/type-strikethrough.svg" /></a></li>
+
+    </ul>
+
+  </div>
+ 
+ 
+
+
+  <div class="row_3" id="current-font-id" style=" height: 37px; " (click)="row_clicked('row_3')"
+    [ngStyle]="{'border-color':row3_clicked == true ?   '#adff2f'   : '#454545'  }">
+
+
+    <ul>
+      <li style="list-style: none;"><a class="justify-left"
+          style="background-color: brown; width:30px; height: 35px; margin-left: -10px;  padding-top: 4px; margin-right: 25px; ">
+          <img id="pbfill" class="active" src="assets/icons/text-left.svg" /></a></li>
+      <li style="list-style: none;"> <a class="active"
+          style="width:30px; height: 35px; margin-left: 08px; margin-top: 0px; padding-top: 4px;"> <img id="pbfill"
+            class="active" src="assets/icons/text-center.svg" /> </a></li>
+      <li style="list-style: none;"><a a class="justify-"
+          style="width:30px; height: 35px;  margin-left: 30px; margin-top: 0px; padding-top: 4px;  "> <img id="pbfill"
+            class="active" src="assets/icons/text-right.svg" /></a></li>
+
+    </ul>
+
+    
+
+   
+  </div>
+
+
+  
+<!--  
+  <div class="number-input">
+    <button style="width:10px; size: 10px;" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+    <input class="quantity" min="0" name="quantity" value="1" type="number">
+    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+  </div> -  -->
+  <input class="numberInput"  (keypress)="numberOnly($event)" type="number" step="1" min="0">
+
+  <!-- <label class="custom-field">
+    <input type="email" placeholder="&nbsp;"/>
+    <span class="placeholder">Enter Email</span>
+    <span class="error-message" aria-live="polite"></span>
+  </label>
+  -->
+ <!-- <input type="number" id="quantity" name="quantity" min="1" max="5" style="width:40px"> -->
+
+ 
+
+  <!-- 
+        <div class="current-font-styles2" id="current-font-id" style=" height: 33px;padding-top:10px;">
+
+
+          <ul >
+            <li ><a class="active"  style="width:33px; margin-left:-33px; padding-top: 10px;">1</a></li>
+            <li> <a class="active"  style="width:33px ; padding-top: 10px;"  >2</a></li>
+            <li><a a class="active"  style="width:33px; padding-top: 10px;">3</a></li>
+                   
+          </ul>
+        </div>  -->
+
+
+
+  <div class="fonts-list-position">
+    <app-text-edit id="fonts" class="fonts"  *ngIf=" (_isChooseFontOpen$|async ) == true"></app-text-edit>
+    <!-- <app-text-edit id="fonts" class="fonts2"  *ngIf=" (_isChooseFontOpen$|async ) == false"></app-text-edit> -->
+  </div>
+  <!-- <app-text-edit></app-text-edit>   -->
+
+<!-- 
+  <input type="number" class="fontSizeInput">  -->
+
+  <!-- <div class="p-field p-sm-3 pr-4 mt-20 w-3"  >
+    <label for="stacked">Stacked</label>
+    <p-inputNumber   class="px-6 pr-4 ml-4 margin-left:4px"[(ngModel)]="value17" [showButtons]="true" inputId="stacked" mode="currency" currency="USD">
+    </p-inputNumber>
+</div> -->
+
+ 
+  <!-- <input type="number"> -->
+
+</modal>
+

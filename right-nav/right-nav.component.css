@@ -1,0 +1,251 @@
+
+.sidenav {
+    height: 100%;
+    width: 50px;
+ 
+  
+   /* position: fixed;  
+   margin-left: 600px; */
+   float:right;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(40, 40, 40);
+    /* overflow-x: hidden; */
+    transition: 0.5s;
+  
+  }
+
+
+
+.fixed-containment{
+    width: 50px;
+}
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: #00457d;
+    /* padding: 10px; */
+ 
+  }
+  .grid-item {
+    background-color: rgba(0, 62, 91, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    /* padding: 20px; */
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+   
+  }
+
+
+
+
+
+
+
+
+  
+
+  .popover__title {
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration: none;
+    /* color: rgb(228, 68, 68); */
+    text-align: center;
+    /* padding: 25px 0; */
+    /* width: 50px;
+     height: 50px;  */
+     
+    top: -120px;
+    /* margin-left: 10px; */
+    background-color: transparent;
+
+  }
+
+  #fill{
+    margin-left: -10px;
+    margin-top: -20px;
+  }
+
+
+/* 
+  .popover__title {
+    background-color: pink; 
+    visibility: visible;
+  } */
+  .popover__title:focus{
+    width: 50px;
+    height: 50px;   
+   top: -120px;
+   background-color: pink; 
+ }
+ 
+
+  .popover__wrapper {
+    position: relative;
+    margin-top:300px;
+    display: inline-block;
+  }
+
+  .popover__content {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    position: absolute;
+    left:  60px; 
+    /* top: -25px; */
+    transform: translate(0, 10px);
+    background-color: transparent;
+    /* padding: 1.5rem; */
+    /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); */
+    /* width: auto; */
+    /* border-radius: 8px; */
+  }
+
+
+  /* triangle */
+  .popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(50% - 10px);
+    top: 80px;
+    left: -15px;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color:  transparent  rgb(40, 40, 40) transparent  transparent  ;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transform: rotate(225deg);
+  }  
+ 
+   .popover__wrapper:focus-within .popover__content  {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    
+  }
+ 
+  .popover__message {
+    text-align: center;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .popover__title2 {
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration: none;
+    /* color: rgb(228, 68, 68); */
+    text-align: center;
+    /* padding: 25px 0; */
+    /* width: 50px;
+     height: 50px;  */
+     
+    top: 120px;
+    /* margin-left: 10px; */
+    background-color: transparent;
+
+  }
+
+  #fill2{
+    margin-left: -10px;
+    margin-top: -20px;
+  }
+
+
+/* 
+  .popover__title {
+    background-color: pink; 
+    visibility: visible;
+  } */
+  .popover__title2:focus{
+    width: 50px;
+    height: 50px;   
+ 
+   background-color: rgb(255, 142, 161); 
+ }
+ 
+
+  .popover__wrapper2 {
+    /* position: relative; */
+    /* margin-top: - 6.5rem;   */
+    margin-top:  -25px;
+    margin-left: -2px;
+    /* display: inline-block; */
+  }
+
+  .popover__content2 {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    position: absolute;
+    left:  60px; 
+    top: - 125px;  
+   
+    transform: translate(0, 10px);
+    background-color: transparent;
+    /* padding: 1.5rem; */
+    /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); */
+    /* width: auto; */
+    /* border-radius: 8px; */
+  }
+
+
+  /* triangle */
+  .popover__content2:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(50% - 10px);
+    top:  -1px;  
+    left: -15px;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color:  transparent  rgb(40, 40, 40) transparent  transparent  ;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transform: rotate(225deg);
+  }  
+ 
+
+  /* actual controls */
+   .popover__wrapper2:focus-within .popover__content2  {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    /* top: - 125px;   */
+    transform: translate(0, -20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    
+  }
+ 
+  .popover__message2 {
+    text-align: center;
+    margin-left: -10px;
+    margin-top: -80px;
+  }
+
+
+ 
+

@@ -1,0 +1,124 @@
+<div id="mySidenav" class="sidenav"   >
+  
+
+
+
+  <div class="grid-container">
+    <div class="adjustment-wedge"    style='position: fixed'> 
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+
+    
+ 
+    <div class="grid-item">
+
+      <div class="text-edit_button"   >
+        
+      </div>
+    </div>
+   
+    <div class="grid-item">    </div>
+   
+    <div class="grid-item"></div>
+    <div class="grid-item">
+     
+    </div>  
+    <!-- *ngIf="(_isImageDropOpen$|async )==true" -->
+    <div class="grid-item">
+     <img   
+     (click)="itemVisibility('image-drop')"  
+      src="assets/icons/image.svg"  /> 
+   <!-- <app-image-drop  ></app-image-drop>      -->
+    </div>
+   
+    <div class="grid-item"  
+    (click)="itemVisibility('add-content')" >
+      <img id="pbfill" class="pbfill" src="assets/icons/menu-button-white.svg"  />
+   
+       <app-data-form  class="app-data-form"  *ngIf="( _isAddContentOpen$ | async) == true"></app-data-form>   
+       
+     <!--  *ngIf="(_isColorChooserOpen$ | async) == true" -->
+          <!-- <app-data-form   [@simpleFadeAnimation]="isOpen ? 'in' : 'closed'" *ngIf="( _isAddContentOpen$ | async) == true" ></app-data-form>   -->
+          <!-- <button (click)="closeDialog()" >Close Dialog</button> -->
+    
+
+    </div>  
+    <div class="grid-item"  (click)="itemVisibility('color')" >
+
+      
+        <img id="pbfill" class="pbfill" src="assets/icons/paint-bucket-fill.svg"  />
+      
+   
+     <!--  *ngIf="(_isColorChooserOpen$ | async) == true" -->
+
+
+        <app-color-picker  [@simpleFadeAnimation]="isOpen ? 'in' : 'closed'" *ngIf="(_isColorChooserOpen$ | async) == true" ></app-color-picker > 
+          <!-- <button (click)="closeDialog()" >Close Dialog</button> -->
+   
+
+    </div>  
+    
+    <div class="grid-item"   
+    (click)="itemVisibility('edit-text')"
+     [ngStyle]="{'border-color': _font_edit_clicked == true ?   '#adff2f'   : '#454545'  }" >
+      <div class="text-edit_button"   
+       
+        >
+        <img id="pbfill" class="pbfill" src="assets/icons/fonts-white.svg"  />
+      </div >
+
+      <div   ><app-edit-text-menu  
+        *ngIf="this.isMainWindowActive == true" 
+        [@simpleFadeAnimation]="isOpen ? 'in' : 'closed'"
+        ></app-edit-text-menu > </div>
+        <!--  (click)="toggle()" [@childAnimation]="isOpen ? 'open' : 'closed'"  -->
+
+        <!-- *ngIf="(_isEditFontOpen$ | async) == true"  -->
+       
+ 
+ 
+    </div> 
+    
+    <div class="grid-item">
+
+      <div class="floppy-disc_button"  >
+        <img id="pbfill" class="pbfill" src="assets/icons/floppy-disk-light.svg"    />
+      </div>
+    </div> 
+     
+    <div class="grid-item"></div> 
+    <div class="grid-item"></div> 
+    <div class="grid-item"></div> 
+    <div class="grid-item"></div> 
+    
+  </div>
+
+
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+   
+
+  <div class="popover__wrapper2">
+    <a href="#">
+
+      <button class="popover__title2">
+        <img id="fill2" src="assets/icons/fonts.svg" />
+       
+        <div class="popover__title_triangle2"></div>
+      </button>
+    </a>
+    <button class="popover__content2">
+      <p class="popover__message2">
+        <!-- <app-font-picker></app-font-picker> -->
+    
+      </p>
+
+    </button>
+  </div>
+
+  
+
+  <!-- <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a> -->
+</div>

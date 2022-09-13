@@ -1,0 +1,11 @@
+<div style="width:122px;" class="cover-over"> 
+ 
+<div #picker class="gesture__zone">
+	<div #inner>
+		<div class="dragZone" cdkDrag cdkDragLockAxis="y" (cdkDragEnded)="onDrop($event)" ></div>
+		<div #d class="item" [ngClass]="{'selected':i==value}" *ngFor="let item of items;let i=index"
+			(click)="value=i;move(i)">{{item}}</div>
+	</div>
+</div>
+</div>
+ 
