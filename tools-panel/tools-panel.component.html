@@ -1,0 +1,85 @@
+<div class="xxx" (click)="getPosition($event)">xxx</div>
+<div class="sidenav-toggleIsFalse" *ngIf="!sidenav_toggle" (click)="sidenav_isToggled()"></div>
+  
+  <div class="sidenav"  *ngIf="!sidenav_toggle">
+ 
+  
+
+<div>
+    <h1 [style.font-family]="primaryFont">
+      FONT FAMILY
+    </h1>
+    <select [ngModel]="primaryFont" (ngModelChange)="onChange_fontFamily($event)">
+      <option value=''>Select</option>
+      <option *ngFor="let p of fontfamilys" value="{{p.value}}">{{p.title}}</option>
+    </select>
+    <h1></h1>
+  </div>
+
+ 
+
+  <div class="row">
+    <h1>BACKGROUND COLOR</h1>
+    <input  class="bgColorInput" [value]="backgroundColor" [style.background]="rgbaText_background" [cpAlphaChannel]="'always'"
+      [cpOutputFormat]="'hex'" [colorPicker]="backgroundColor"
+      (colorPickerChange)="rgbaText_background=onChangeColorHex8_background($event); backgroundColor=$event" />
+
+
+      <div class="width_frame"  > 
+    <h1>FONT COLOR</h1>
+    <input [value]="fontColor" [style.color]="rgbaText_font" [cpAlphaChannel]="'always'" [cpOutputFormat]="'hex'"
+      [colorPicker]="fontColor" (colorPickerChange)="rgbaText_font=onChangeColorHex8_font($event); 
+      fontColor=$event" />
+
+    <h1>FONT SIZE</h1>
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1.25" min=".1" max="301.1"
+      value='{{primarySentence_fontSize}}' aria-label="units" [(ngModel)]="primarySentence_fontSize"
+      (input)="onChange_primarySentence_slider_fontSizeSlider($event)"></mat-slider>
+
+  
+
+
+    <h1>MAIN TEXT X POSITION</h1>
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1.25" min="0" max="100"
+      value='primarySentence_xPosition' aria-label="units" [(ngModel)]="primarySentence_xPosition"
+      (input)="onChange_primarySentence_slider_xPosition($event)"></mat-slider>
+
+    <h1>MAIN TEXT Y POSITION</h1>
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1.25" min="0" max="48.78"
+      value='{{primarySentence_yPosition}}' aria-label="units" [(ngModel)]="primarySentence_yPosition"
+      (input)="onChange_primarySentence_slider_yPosition($event)"></mat-slider>
+
+
+        </div>
+
+
+ <div class="width_frame"  > 
+
+
+ 
+  <h1>IMAGE HEIGHT</h1>
+  <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="2.50" min="10" max="100"
+    value='{{primaryImage_height}}' aria-label="units" [(ngModel)]="primaryImage_height"
+    (input)="onChange_primaryImage_slider_height($event)"></mat-slider>
+
+
+      <h1>IMAGE WIDTH</h1>
+      <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="2.50" min="10" max="100"
+        value='{{primaryImage_width}}' aria-label="units" [(ngModel)]="primarySentence_width"
+        (input)="onChange_primaryImage_slider_width($event)"></mat-slider>
+
+
+    <h1>IMAGE X POSITION</h1>
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1.25" min="0" max="100"
+      value='primaryImage_xPosition' aria-label="units" [(ngModel)]="primaryImage_xPosition"
+      (input)="onChange_primaryImage_xPosition($event)" (mousedown)="onMouseDown()"></mat-slider>
+
+
+    <h1>IMAGE Y POSITION</h1>
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1.25" min="0" max="100"
+      value='{{primaryImage_yPosition}}' aria-label="units" [(ngModel)]="primaryImage_yPosition"
+      (input)="onChange_primaryImage_yPosition($event)"></mat-slider>
+
+    </div>
+
+</div> 
