@@ -1,0 +1,30 @@
+
+ 
+ label{
+     font-size: 9px;
+ }
+ 
+ 
+ #input{
+     height: 25px;
+    width: 400px;
+ }
+ 
+.domain{
+ 
+    width: 600px ;
+}
+
+
+.description{
+    height: 200px; 
+    width: 100px ;
+    margin-top: 50px;
+}
+.description-label{
+    margin-top: 10px;
+}
+
+.form-control{
+    width: 600px;
+}

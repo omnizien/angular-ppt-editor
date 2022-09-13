@@ -1,0 +1,255 @@
+body {
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 20px;
+  background: #EDEDED;
+}
+
+#flexContainer {
+  /* Specifies that the contents will be laid out according to Flexbox rules. */
+  display: flex;
+ 
+}
+
+header {
+  background: transparent;
+  min-height: 100px;
+  margin: 3px;
+  padding: 3px;
+}
+
+nav {
+  background: #303030;
+  /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+  /* flex: 1 1 15%; */
+   width: 55px;
+  margin: 3px;
+  padding: 3px;
+}
+
+aside {
+  background: #ac5b5b;
+  /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+  /* flex: 1 1 15%; */
+  
+  width: 55px;
+  height: auto;
+  padding: 3px;
+  margin: 3px;
+}
+
+#content {
+  min-height: 800px;
+  background: transparent;
+  /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+  flex: 1 1 40%;
+  margin: 3px;
+  padding: 3px;
+  z-index: -1;
+  /* width: 200px; */
+}
+
+footer {
+  background: #707070;
+  min-height: 50px;
+  margin: 3px;
+  padding: 3px;
+}
+
+
+ 
+/* When the page is resized, use the styles below */
+
+@media all and (max-width: 640px) {
+  #flexContainer {
+    /* Shorthand property specifying flex-direction and flex-wrap */
+    flex-flow: column wrap;
+     
+  }
+  header {
+    min-height: 75px;
+  }
+  nav {
+    min-height: 50px;
+    /* Specifying the order so the nav appears as the first item in the flex container */
+    order: 1;
+  }
+  aside {
+    min-height: 50px;
+    /* Specifying the order so the nav appears as the second item in the flex container */
+    order: 2;
+  }
+  #content {
+    /* Specifying the order so the nav appears as the third item in the flex container */
+    min-height: 725px;
+    order: 3;
+    margin-left: 200px;
+    z-index: -2;
+  }
+
+ 
+  footer {
+    min-height: 25px;
+  }
+}
+
+ 
+.card {
+  width: 348px; 
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+  margin-left: 100px;
+  z-index: -3;
+  border: none;
+}
+/* 
+app-box-selector4{
+  transform: scale(0.3)!important; 
+} */
+
+
+.app-number-dialer{
+  position: absolute;
+  margin-top: 600px;
+  margin-left:450px;
+}
+
+.slash{
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 605px;
+  margin-left:600px;
+  font-size: 30px;
+
+ 
+}
+
+.numberInput{
+  width: 75px;
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 600px;
+  margin-left:620px;
+  font-size: 30px;
+  border: black .5px solid;
+}
+
+.numberInput:focus{
+  width: 75px;
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 600px;
+  margin-left:620px;
+  font-size: 30px;
+ 
+  outline: none;
+}
+
+
+
+
+
+input[type="number"] { 
+  -webkit-appearance: textfield; 
+  -moz-appearance: textfield; 
+  appearance: textfield; 
+} 
+ 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+} 
+ 
+.number-input { 
+  position: absolute;
+  
+  margin-top: 602px;
+  margin-left:620px;
+  /* border: 2px solid #ddd;  */
+ 
+  /* display: inline-flex;  */
+} 
+ 
+.number-input, 
+.number-input * { 
+  box-sizing: border-box; 
+ 
+} 
+ 
+.number-input button { 
+  -webkit-appearance: none; 
+  background-color: transparent; 
+  border: none; 
+  align-items: center; 
+  justify-content: center; 
+ 
+  width: .75rem; 
+  height: .75rem; 
+  cursor: pointer; 
+  margin: 0; 
+  position: relative; 
+  margin-left: -20px;
+   border: none; 
+} 
+ 
+.number-input button:before, 
+.number-input button:after { 
+  display: inline-block; 
+  position: absolute; 
+  content: ''; 
+  width: .75rem; 
+  
+  height: 1px; 
+  background-color: #212121; 
+  transform: translate(-50%, -50%); 
+
+
+ 
+} 
+
+.number-input button:hover{
+  width: 1rem; 
+  height: 1rem; 
+}
+.number-input button.plus:after { 
+  transform: translate(-50%, -50%) rotate(90deg);
+  
+  
+ 
+} 
+ 
+.number-input input[type=number] { 
+  font-family: 'Times New Roman', Times, serif;
+  /* max-width: 5rem;  */
+  /* padding: .5rem;  */
+  
+  border-width: 0 2px; 
+  font-size: 1.55rem; 
+  height: 3rem; 
+  /* font-weight: bold;  */
+  border: none; 
+  text-align: left; 
+  text-indent: 20%;
+
+  /* border-radius: 8px; */
+  
+  width: 80px;
+  /* box-shadow: 0px 0px 2px 2px rgb(237, 237, 237)    */
+  
+}
+.number-input :focus { 
+ 
+  outline:none;  
+  border: .5px #444444 solid;   
+  
+  
+}
+
+.number-input:hover{
+  border: .5px #444444 solid;
+}
+
+ 
+
+.bt{
+  position:absolute;
+  margin-left: 50px;
+}

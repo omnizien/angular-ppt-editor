@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="column left">
+		<div id="div1" cdkDrag cdkDropList cdkDropListConnectedTo="drop-list" *ngFor="let type of types"
+			[cdkDragData]="type" (cdkDragMoved)="moved($event)">
+			{{type.text}}
+			<div *cdkDragPlaceholder class="field-placeholder"></div>
+
+		</div>
+	</div>
+	<!-- <div class="column right">
+		<h2 style="text-align: center">Box2</h2>
+		<div appDnd class="dropZone" cdkDropList id="drop-list" (cdkDropListDropped)="itemDropped($event)">
+			<div *ngFor="let field of fields;" cdkDrag
+          style="position:absolute;" [style.top]="field.top" [style.left]="field.left">
+					{{field.text}}
+			</div>
+		</div>
+
+	</div> -->
+
+
+    <div class="file-drop-container"  id="file-drop-container"       appDnd>
+        <input type="file" #fileDropRef id="fileDropRef" multiple   />
+        
+        <div class="drop-zone">
+             
+
+       
+
+        </div>
+        <!-- Drag images from your desktop -->
+        <!-- <h3 class="drop-heading"> Drag images from your desktop </h3> -->
+
+</div>
+

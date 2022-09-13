@@ -1,0 +1,496 @@
+body{
+  background-color:transparent;
+ 
+    background: #FFF;
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-y: scroll; /* Show vertical scrollbar */
+    overflow-x: scroll; /* Show horizontal scrollbar */
+    z-index: 4;
+  }
+
+ 
+  
+.container {
+ 
+  position: absolute;
+   
+  transform: translate(0, -20px);
+ 
+  margin-left: 450px;
+  margin-top: -100px;
+  /* width: 1700px; */
+  height: 700px;
+
+
+  padding: 10px;
+  
+   background-color: rgb(135, 135, 135) ;
+   border-radius: 4px;
+/* opacity: .5; */
+ 
+  font-size: 15px;
+
+  visibility: visible;
+ 
+  -webkit-animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+   
+}
+
+
+.add-button{
+
+  position: relative;  
+  /* margin-bottom: 10px; */
+   margin-left: -150px;  
+  
+  /* margin-top: 340px;   */
+ 
+ /* margin-left: 540px; */
+   /* color: #00801e */
+   /* border: 1px solid rgb(153, 153, 153); */
+   
+ }
+/* Create two equal columns that floats next to each other */
+.data-entry-container{
+  /* background-color: rgb(203, 203, 203);
+border-width: 1px;
+border-style:dotted;
+border-radius: 8px;
+border-color: rgb(188, 188, 188);
+  float: left;
+  width: 74%; */
+  /* padding: 10px; */
+ 
+
+  /* overflow: auto; */
+ 
+  /* powerpoint slide is ( 1000px x 750px ) = ((3/4)1000)=750 & 750 ((3/4)750)= 562.5 = 750w 562.5h  
+     */
+
+  position: relative;
+  /* rgb(245, 245, 245) */
+  background-color: rgb(75, 75, 75);
+  resize:both;
+  min-width: 700px;
+  max-width: 1000px;
+  /* height: 400px;
+  width: 700px; */
+  /* height: 562px;
+  width: 750px; */
+ 
+  /* 960px; */
+  /* height: 405px; */
+  /* width: 720px; */
+  
+  overflow: auto;
+  margin-top: -150px;
+  height: 1000px;
+  width: 1200px;
+  left: 50%;
+  margin-left: -390px;
+  margin-bottom: 30px;
+ 
+  box-shadow:  40px 40px 40px #cccccc,
+  0 0 0 #ffffff,
+  0 0 0 #cccccc inset,
+  2px 2px 2px #ffffff inset;
+  border-radius: 8px;
+}
+  
+.add-lessons-form{
+  position: relative;
+ margin-top: 200px; 
+ /* border: #9acd32 1px solid; */
+ 
+}
+
+.ng-container2{
+  border: #9acd32 1px solid; 
+}
+
+mat-expansion-panel{
+  border-radius: 0px;
+  width: 50px;
+}
+
+mat-expansion-panel:hover{
+   
+  /* background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255); */
+  
+  border-style:dotted;
+  border: dotted  .5px #000000;
+  box-shadow: 0px 0px 1px 1px rgb(201, 201, 201);
+  
+}
+
+mat-expansion-panel::after{
+  border: dotted  1.5px #c1c1c1;
+}
+ 
+.grid-container {
+  display: grid;
+  grid-template-columns: 525px 195px;
+  /* background-color: #2196F3; */
+ 
+}
+
+.grid-item {
+  background-color: transparent;
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  
+ 
+  /* text-align: center; */
+}
+/* .top-container{
+  position: relative;
+  background-color: aqua;
+  height: 200px;
+  width: 720px;
+  left: 50%;
+  margin-left: -360px;
+  margin-bottom: 200px;
+
+} */
+
+.app-box-selector4{
+   /* position: relative; */
+  /* width: 600px;
+  height: 400px; */
+  /* left: 50%;
+  right: 50%;
+  margin-left: -300px;
+  margin-bottom: 50px; */
+  
+  /* margin-top: 65px; */
+}
+
+.top-column1 {
+  background-color: rgb(203, 203, 203);
+border-width: 1px;
+border-style:dotted;
+border-radius: 3px;
+border-color: rgb(188, 188, 188);
+  float: left;
+  width: 74%;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+  width: 100px;
+  overflow: auto;
+   
+}
+
+.top-column2 {
+  background-color: rgb(203, 203, 203);
+border-width: 1px;
+border-style:dotted;
+border-radius: 3px;
+border-color: rgb(188, 188, 188);
+  float: left;
+  width: 74%;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+  width: 400px;
+  overflow: auto;
+  /* box-shadow: 20px -10px teal; */
+  margin-left:10px;
+ 
+}
+
+
+ 
+
+/* 1430 x 1072 */
+.mid-container2 {
+
+  /* padding: 10px; */
+  
+
+  position: relative;
+  background-color: rgb(245, 245, 245);
+/* 1430 x 1072 */
+/* 1072 x 804 */
+ /* 804 x 603 */
+  /*  603px x 603 */
+
+  /* height: 603px;
+  width: 804px;  */
+  /* height: 542.7px;
+  width: 723.6px;  */
+  /* height: 540px;
+  width: 720px;  */
+  height: 540.39px;
+    width: 960.62px; 
+  /* left: 10%;   */
+  margin-top: 20%;
+  /* margin-left: -360px; */
+  /* margin-bottom: 30px; */
+ /* box-shadow: 0px 0px 4px 4px rgb(201, 201, 201)  */
+}
+
+
+
+
+.column2 {
+    background-color: rgb(188, 188, 188);
+  border-width: 1px;
+  border-style:dotted;
+  border-radius: 8px;
+  border-color: rgb(188, 188, 188);
+    float: left;
+    width: 21%;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+    /* height: 500px;   */
+    box-shadow: 20px -10px teal;
+    margin-left: 1%;
+  }
+  
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#selectedImage{
+
+  width: 150px;
+  height: 100px;
+}
+
+
+
+
+
+
+
+.input-data{
+border: 1px solid #666;
+background-color: #FFF;
+ 
+ 
+/* box-shadow:0px 0px 0px 4px #EEE inset; */
+}
+ 
+
+
+h3 {
+  font-weight: 700;
+}
+.form-group{
+  width: 10%;
+ 
+}
+pre, .wrapper {
+  background-color: rgb(240, 250, 250);
+  padding: 1rem;
+  border: 1px solid #444;
+}
+
+/* input {
+  margin: .5rem;
+  padding: .5rem;
+} */
+ 
+#level{
+  /* margin-left: 20px; */
+}
+input {
+  border: none;
+  /* background: blue; */
+  padding: 0;
+  outline: none;
+  /* font: inherit; */
+  /* text-align: center; */
+  color: currentColor; 
+  max-height: 20px;
+ 
+ 
+}
+ 
+.img-icn
+{
+  position: absolute;
+    height: 10px;
+    width: 10px;
+    margin-left: -160px;
+    margin-top: 1px;
+    z-index: 4;
+   
+    background-color: transparent;
+}
+.wedge{
+  width: 20px;
+ 
+  background-color: transparent;
+}  
+
+.add-btn{
+    /* margin-left: 30px; */
+    /* border: 1px solid rgb(51, 0, 255); */
+    color: #000080;
+    width: 120px;  
+     margin-left: 40px;  
+}
+
+
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+      flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+/*   padding: 2em 0em; */
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #FFF;
+  padding:  40px 0px;
+  width: 240px;
+}
+
+h1 {
+  text-align: left;
+  color: #444;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.4em;
+  font-size: 1em;
+}
+
+p {
+  text-align: left;
+  color: #444;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
+  margin: 0 0 2em;
+}
+
+
+.btn {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover {
+  text-decoration: none;
+}
+
+/*btn_background*/
+.effect01 {
+  color: #FFF;
+  border: 4px solid #000;
+  box-shadow:0px 0px 0px 1px #000 inset;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.effect01:hover {
+  border: 4px solid #666;
+  background-color: #FFF;
+  box-shadow:0px 0px 0px 4px #EEE inset;
+}
+
+/*btn_text*/
+.effect01 span {
+  transition: all 0.2s ease-out;
+  z-index: 2;
+}
+.effect01:hover span{
+  letter-spacing: 0.13em;
+  color: #333;
+}
+
+/*highlight*/
+.effect01:after {
+  background: #FFF;
+  border: 0px solid #000;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .8;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  width: 50px;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+  z-index: 1;
+}
+.effect01:hover:after {
+  background: #FFF;
+  border: 20px solid #000;
+  opacity: 0;
+  left: 120%;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+ 
+
+.submit-button{
+  width: 500px;
+  /* margin-left: 100px; */
+  /* margin-left: 540px; */
+    color: #00801e
+    /* border: 1px solid rgb(153, 153, 153); */
+    
+}
+
+.submit-button:hover {
+ 
+  background-color: rgb(221, 255, 187);
+}
+
+
+
+ 
+
+
+.data-entry-container{
+/* animation: opacity1 2.5s cubic-bezier(0.16, 1, 0.3, 1) 1s   alternate; */
+}
+
+ 
+/* ::-webkit-scrollbar {
+  -webkit-appearance: none;
+ 
+} */
+/* ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+} */
+/* 
+@keyframes opacity1 {
+0% {
+opacity: 0;}
+25% {
+  opacity: 0;
+}
+50% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}} */
+

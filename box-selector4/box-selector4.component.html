@@ -1,0 +1,87 @@
+ 
+ 
+<!-- https://ultimatecourses.com/blog/using-ngstyle-in-angular-for-dynamic-styling -->
+ 
+
+<!-- [style.background-color]="slideBackgroundColor"  -->
+
+ 
+<!-- <div  class = "slide"
+  (mousedown)="activateMoveableControl($event)"
+  #slide
+  id="parentRef"
+  [style.width]="width"
+  [style.height]="height"
+  
+  style=" border: 2px dashed grey; position: relative; overflow: hidden;   "
+  [class.parentGuideline]="showParentGuideline"
+ 
+  
+> -->
+ <app-background-editable class="app-background-editable">  </app-background-editable> 
+
+ 
+ 
+ 
+<div  #slide class="slide"   #select0  (mouseup)="mouseup_presentationBox($event)">
+  <!-- <app-image-editable  [backgroundColor]="slideBackgroundColor"  [image1]="image_1_base64"   > </app-image-editable>
+  
+  <app-text-editable class="slide-sentence"  > </app-text-editable> -->
+  <app-movable-objects></app-movable-objects>
+
+
+  <!-- <app-text-editable id="2" class="slide-sentence"  > </app-text-editable> -->
+
+<!-- 
+<div id="backwards"  (click)="backwards()" > <mat-icon class="arrow_back_ios"     [inline]="true">arrow_back_ios</mat-icon> </div>
+<div id="forwards"   (click)="forwards()" > <mat-icon class="arrow_forward_ios" [inline]="true">arrow_forward_ios</mat-icon>  </div>
+  -->
+ 
+    <!-- <div class="image-size" [src] ='imagePath' > -->
+      <!-- cdkDrag [src]='primaryImage'   -->
+      <!-- src="https://images.unsplash.com/photo-1577332169329-6325afda6ee3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" -->
+  <!-- <img #imageBox   
+  [cdkDragFreeDragPosition]="dragPosition"
+  class="imageBox" 
+  id="image-box" 
+    
+  [src]='primaryImage'  
+  [style.margin-left]="primaryImage_xPosition" 
+  [style.width]="primaryImage_width"
+  [style.height]="primaryImage_height"
+  [style.margin-top]="primaryImage_yPosition"
+
+  (mouseup)="mouseup_imageBox($event)" 
+
+  cdkDragBoundary=".slide" 
+   >
+    -->
+ 
+<!-- 
+ <div class="slide-sentence"    >
+  <p  
+  [style.font-family]="primaryFont"
+  [style.font-size]="fontSize"  
+  [style.color]="fontColor"
+  [style.margin-left]="primarySentence_xPosition"
+  [style.margin-top]="primarySentence_yPosition"
+  [style.background-color]="primarySentence_backgroundColor" > {{sentence}} </p>
+ 
+</div> -->
+   
+  <!-- primaryKeyWords[1] -->
+<!-- <button id='button1' (click)="getPpt()">
+  <mat-icon>cloud_download</mat-icon> PPT
+</button> -->
+
+<div>
+ 
+<!-- <div id="download">
+  <img #canvas>
+  <a #downloadLink></a>
+</div>
+{{ xPos$ | async}} -->
+
+ 
+
+ 

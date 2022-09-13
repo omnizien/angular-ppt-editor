@@ -1,0 +1,137 @@
+.mat-accordion {
+    display: block;
+    transform-origin: top left;
+    width: 225px; /* this will be the height of the accordion (inversed due to rotation) */
+  }
+
+
+
+#div1 {
+  width: 200px;
+  height: 300px;
+}
+
+#div2 {
+
+  width: 90%;
+
+  height: 500px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+#tr_general {
+  vertical-align: top;
+  border: 15px;
+}
+
+mat-grid-tile {
+  background: lightblue;
+  width: 200px;
+  height: 300px;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+}
+
+ .row {
+  display: flex;
+} 
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+
+
+.field-placeholder {
+ 
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+  float: right;
+}
+
+fieldset {
+  height: 600px;
+}
+
+mat-list-item {
+  display: block !important;
+}
+.dropZone
+{
+  border:1px solid black;
+  position:relative;
+  height:20rem;
+  width:20rem;
+}
+
+
+
+.file-drop-container{
+  
+    position: relative;  
+    /* grid for scaling */
+    /* background: linear-gradient(90deg, rgb(230, 230, 230) 1%, transparent 1%)   0, #fff repeat-y center;
+    background-size: 65px 1px; */
+    
+    
+    background-color: rgb(251, 174, 174);
+    height: 197.5px;
+    width: 480px;     
+    /* width: 60px; */
+    /* height: 60px;   */
+    opacity: 1;
+    /* left: 50%; */
+    /* margin-left: -390px; */
+    margin-bottom: 20px;
+    box-shadow:  40px 40px 40px #cccccc,
+                 0 0 0 #ffffff,
+                 0 0 0 #cccccc inset,
+                 2px 2px 2px #ffffff inset;
+  
+                 margin-left: 400px;
+  
+  
+  z-index: 4;
+  
+     /* animation: anime 1s cubic-bezier(0.16, 1, 0.3, 1); */
+     /* animation: anime-pause .5s  ; */
+    
+   
+     
+  }
+  
+   
+  
+  .drop-zone {
+  
+    position: relative;  
+    background-color: rgb(246, 246, 246);
+  border-width: 1px;
+  
+  opacity: 1;
+    float: left;
+    padding: 10px;
+    height: 90px; 
+    width: 90px;
+    overflow: auto;
+    border: dashed 2px #777;
+    border-radius: 8px; 
+    margin-left:40px;
+    margin-top: 40px;
+    /* alternate */
+    /* animation: opacity1 1.5s cubic-bezier(0.16, 1, 0.3, 1) 1s  ; */
+   
+  }
+  

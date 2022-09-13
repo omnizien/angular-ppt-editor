@@ -1,0 +1,75 @@
+  
+
+ 
+ 
+
+<!-- <header>header</header>
+<section id="flexContainer">
+  <nav><app-tools-panel></app-tools-panel></nav>
+  <section id="content"> <app-box-selector4></app-box-selector4> </section>
+  <aside> <app-image-drop></app-image-drop></aside>
+</section>
+<footer>footer</footer> -->
+
+ <app-navbar></app-navbar>
+ <app-right-nav></app-right-nav>  
+  <header> 
+    
+    
+    <app-image-drop></app-image-drop></header>
+ <section id="flexContainer">
+  <nav>  </nav>
+ <section id="content" (click)=" isMainWindowClicked()">    
+  <app-number-dialer  class = "app-number-dialer" [items]="items" [(ngModel)]="value"></app-number-dialer>   
+  <div class = "slash" > / </div>  
+  <!-- <input class="numberInput"type="number">  -->
+
+  <div class="number-input"> 
+    
+    <input class="quantity" min="0" name="quantity" value="1" type="number" max="50"  > 
+ 
+     
+     <button style="position:absolute;  margin-top: 10px;   ;"   onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button> 
+     <button style="position:absolute;   margin-top: 30px;   ;" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button> 
+
+      
+  </div>
+
+
+    <div class="card">
+      <!-- {{counter$ | async}} 
+      {{isWindowActive$ | async}} -->
+  <app-box-selector4> </app-box-selector4>    
+      <!-- {{value|json}} -->
+     
+   
+  
+  </div>  </section> 
+  <aside>    </aside>
+</section>  
+ 
+<footer> </footer>    
+
+
+
+<!-- <app-data-form></app-data-form> -->
+<!--  
+<div class="app-main">
+  <app-toast class="app-toast" message="Link copied"></app-toast>
+
+  <header class="app-header container">
+    <app-header [searchValue]="searchValue" (onSearch)="handleSearchGifs($event)"></app-header>
+  </header>
+
+  <main class="app-content container">
+    <router-outlet></router-outlet>  
+  </main>
+</div>
+ -->
+<!-- 
+ <app-giphy-search></app-giphy-search> -->
+
+
+
+
+ 

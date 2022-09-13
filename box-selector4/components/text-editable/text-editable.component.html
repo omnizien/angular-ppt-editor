@@ -1,0 +1,98 @@
+  
+    <!-- <ngx-moveable
+    *ngIf="isActive==true"
+    [target]="target"
+    [draggable]=' this.isTextDraggable$ | async'
+    [throttleDrag]='0'
+    [startDragRotate]='0'
+    [throttleDragRotate]='0'
+  
+ 
+    [padding]='{"left":0,"top":0,"right":0,"bottom":0}'
+    (dragStart)="onDragStart($event)"
+    (drag)="onDrag($event)" >   </ngx-moveable> -->
+
+    
+
+    <!-- <input id="text" type="text">  -->
+    <!-- maxlength="50" -->
+
+
+  
+<ngx-moveable
+*ngIf="isActive == true "
+[target]="target"
+[draggable]=' this.isTextDraggable$ | async'
+[throttleDrag]='0'
+[startDragRotate]='0'
+[throttleDragRotate]='0'
+
+[padding]='{"left":0,"top":0,"right":0,"bottom":0}'
+(dragStart)="onDragStart($event)"
+(drag)="onDrag($event)">   </ngx-moveable>
+
+
+     
+ <div 
+    
+     matInput 
+    (click)="moveableClicked()"
+     [appTextEditable]="'red'" 
+     class="target"  
+      id="target" 
+       #target   
+       placeholder="tex beta" 
+        
+       [style.font-family]="_primaryFont$ | async"
+        (change)="onCommentChange()"  
+  >  text b e t a
+</div>   
+
+<!-- 
+
+<textarea matInput 
+ [appTextEditable]="'red'" 
+ contenteditable="true" 
+ class="target"  
+  id="target" 
+   #target   
+   placeholder="text alpha" 
+   [formControl]="commentFC" 
+  
+    (change)="onCommentChange()"  > 
+</textarea> -->
+
+
+
+ 
+
+ 
+
+
+
+
+<!-- [style.pointer-events]="what"  -->
+<!-- 
+    *ngIf="contEditable==true" -->
+<!--    
+    <textarea 
+ 
+
+     matInput 
+    
+
+     [style.pointer-events]="what"
+    (click)="moveableClicked()"
+     [appTextEditable]="'red'" 
+  
+     class="target"  
+      id="target" 
+       #target   
+       placeholder="text here" 
+       [formControl]="commentFC" 
+      
+       [style.font-family]="_primaryFont$ | async"
+           > 
+    </textarea> 
+  -->
+    

@@ -1,0 +1,44 @@
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   1st column!! -->
+<div class="row">
+    <div class="column1">
+  
+     <p>--------------------------------------</p>
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+ 
+        <div class="form-group">
+          <label for="of_slides">Images Dropdown </label>
+          <select class="form-control" id="input" required [(ngModel)]="model.image" name="image" #image="ngModel">
+            <option *ngFor="let pow of images" [value]="pow">{{pow}} </option>
+          </select>
+          <div [hidden]="image.valid || image.pristine">
+            Number of slides is required
+          </div>
+        </div>
+  
+        <img id="selectedImage" [src]='imagePath'>
+        <!-- [hidden]="power.valid || power.pristine" class="alert alert-danger" -->
+   
+  
+  
+  
+        <!-- {{ model | json }} -->
+        <div class="form-group">
+          <label for="name">Primary Content</label>
+          <input type="text" class="form-control" id="input" required [(ngModel)]="model.name" name="name" #name="ngModel">
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Primary Content is required
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="alterEgo"> Translations</label>
+          <input type="text" class="form-control" id="input" [(ngModel)]="model.translation" name="alterEgo">
+        </div>
+  
+ 
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   2nd column!! -->
+      </form>
+    </div>
+  
+    <!-- <div [hidden]="submitted"> -->
+     

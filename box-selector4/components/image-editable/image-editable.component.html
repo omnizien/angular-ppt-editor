@@ -1,0 +1,53 @@
+<div class="slide" 
+(mousedown)="activateMoveableControl($event)" 
+#slide id="parentRef" 
+[style.width]=" boxWidth_str_px"
+  [style.height]=" boxHeight_str_px"
+  style=" overflow: hidden;"
+   
+   >
+
+
+  <div>
+    <img    (mousedown)="onMouseDown_image1()" 
+    [style.left]="image1_left"  
+    [style.top]="image1_top" 
+    class="moveable" 
+    #target [src]='image1' />
+  
+  </div>
+    <!-- this.imagePositionX_isFromSlider_gate == true?  this.imagePositionX_fromSlider_string   : '' -->
+    
+    <!-- <img #target class="moveable"
+    (click)="onClick($event)"
+      src="https://images.unsplash.com/photo-1577332169329-6325afda6ee3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" /> -->
+  
+
+  <ngx-moveable  
+  class="moveable"
+    #moveable 
+   [keepRatio]="true" 
+  [target]="targetEl" 
+  
+    [draggable]="true" [origin]="true"
+    [renderDirections]="['nw', 'ne', 'sw', 'se']" 
+    [resizable]="true" 
+    [throttleResize]="0" 
+    [throttleRotate]="0"
+    [originDraggable]='true' 
+    (drag)="onDrag($event)" 
+    (dragEnd)="onDragEnd($event)" 
+    
+    (resize)="onResize($event)"
+    (resizeEnd)="onResizeEnd($event)"
+    (dragEnd)="onEnd()" (resizeEnd)="onEnd()" [snappable]="true"  
+   
+   
+        >
+    <!-- (mouseup)="mouseup_imageBox($event)" -->
+    <!-- (rotate)="onRotate($event)" -->
+  </ngx-moveable>
+   
+  <!-- [style.margin-left]="this.imagePositionX_isFromSlider_gate == true? this.image_xPosition_fromSlider_px : ''" -->
+
+</div>

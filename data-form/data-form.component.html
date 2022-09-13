@@ -1,0 +1,185 @@
+
+
+ 
+<div class="container" style="margin-top:-250px; margin-left: 500px;" > 
+<div class="row">
+  
+
+
+
+  <div class="data-entry-container" [style.height]="data_entry_container_height">
+    <app-add-button class="add-button" (click)="closeAllPanels()"  
+    [style.margin-left]="addButtonMarginLeft" (click)="addSlot()"></app-add-button>
+
+
+   
+    <!-- <app-add-button class="add-button"    (click)="addSlot()"></app-add-button> *ngIf="lessons.length > 0"  -->
+
+    <div (cdkDropListDropped)="drop($event)"   cdkDropList style="margin-top: 25px; " class="add-lessons-form" [formGroup]="form">
+      <ng-container formArrayName="lessons"   >
+        <ng-container  class="ng-container2" *ngFor="let lessonForm of lessons.controls; let i = index" >
+
+          <!--  mat-accordion  -->
+
+          <mat-accordion #accordion="matAccordion"  style="margin-left: -100px;  "  [multi]="true">
+            <div style="margin-left: 120px; margin-top: -20px; " [formGroup]="lessonForm" cdkDrag>
+              <!-- <mat-icon> drag_handle</mat-icon> -->
+              
+              <img src="../assets/images/move.png" class="img-icn" style="margin-top:10px">
+
+              <mat-form-field class="input-data" style="width:525px ; height: 40px; margin-left:-150px; margin-top: 10px" appearance="fill">
+                <input matInput formControlName="sentence" autocomplete="off" placeholder="text input 1" id="sentence" style="width:125px;">
+              </mat-form-field>
+
+              <input class="wedge" [disabled]="true">
+
+              <mat-form-field class="input-data" style="width:120px; height: 40px;" appearance="fill" id="level">
+                <mat-select formControlName="image1" placeholder="select image">
+                  <mat-option *ngFor="let item of imageArray" [value]="item">{{item}}</mat-option>
+
+                </mat-select>
+              </mat-form-field>
+
+
+              <mat-icon class="delete-btn" (click)="deleteSlot(i)">
+                delete_forever</mat-icon>
+              <!-- (mouseenter)="accordion.openAll()"    -->
+              <!-- (mouseenter)="onMouseEnter($event)" 
+              (mouseleave)="onMouseLeave($event)"  -->
+              <!-- dynamic input (mouseenter)="accordion.openAll()" -->
+
+              <!-- appDataForm  -->
+              <div class="grid-container" style="border:greenyellow 1px solid; margin-left: 25px; width:700px">
+
+                <div class="grid-item" style="width:525px; ">
+
+
+                  <mat-expansion-panel 
+                   autocomplete="disabled"
+                    style="position: relative; width:527px; margin-left: 30px; margin-top: 10px;  box-shadow: 0 0 0;border:rgb(255, 164, 154) 1px solid;"
+                    (click)="onExpPanelClick()"
+                    hideToggle>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <p>+ TXT</p>
+                      </mat-panel-title>
+
+                    </mat-expansion-panel-header>
+
+
+
+
+                    <mat-form-field class="input-data" style="width:415px; margin-left: -20px;" appearance="fill">
+                      <input autocomplete="disabled" autocomplete="off" matInput formControlName="sentence"
+                        placeholder="text input 2 (optional)" id="sentence">
+                    </mat-form-field>
+
+                    <mat-form-field class="input-data" style="width:415px; margin-left: -20px; margin-top:10px ;"
+                      appearance="fill">
+                      <input autocomplete="disabled" autocomplete="off" matInput formControlName="sentence2"
+                        placeholder="text input 3 (optional)" id="sentence">
+                    </mat-form-field>
+                    <mat-form-field class="input-data" style="width:415px; margin-left: -20px; margin-top:10px ;"
+                      appearance="fill">
+                      <input autocomplete="disabled" autocomplete="off"  matInput formControlName="sentence3"
+                        placeholder="text input 4 (optional)" id="sentence">
+                    </mat-form-field>
+
+
+
+                  </mat-expansion-panel>
+
+                  <!-- accordian -->
+
+                </div>
+
+                <!-- <mat-accordion #accordion="matAccordion" [multi]="true">   -->
+                <div class="grid-item" style="width:120px;">
+                  <mat-expansion-panel style=" width:127px; margin-left:  40px; margin-top: 10px;  box-shadow: 0 0 0; border:greenyellow 1px solid;"
+                    hideToggle>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <p>+ IMGS</p>
+                      </mat-panel-title>
+                      <mat-panel-description>
+
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                    <!-- images  -->
+                    <mat-form-field class="input-data" style="width:120px; margin-left: -20px;" appearance="fill"
+                      id="level">
+                      <mat-select formControlName="image2" placeholder="(optional)">
+                        <mat-option *ngFor="let item of imageArray" [value]="item">{{item}}</mat-option>
+
+                      </mat-select>
+                    </mat-form-field>
+
+                    <!-- images  -->
+                    <mat-form-field class="input-data" style="width:120px; margin-left: -20px;margin-top: 10px;"
+                      appearance="fill" id="level">
+                      <mat-select formControlName="image3" placeholder="(optional)">
+                        <mat-option *ngFor="let item of imageArray" [value]="item">{{item}}</mat-option>
+
+                      </mat-select>
+                    </mat-form-field>
+                    <!-- images  -->
+                    <mat-form-field class="input-data" style="width:120px; margin-left: -20px;margin-top: 10px;"
+                      appearance="fill" id="level">
+                      <mat-select formControlName="image4" placeholder="(optional)">
+                        <mat-option *ngFor="let item of imageArray" [value]="item">{{item}}</mat-option>
+
+                      </mat-select>
+                    </mat-form-field>
+                    <!-- images  -->
+
+
+
+                  </mat-expansion-panel>
+                </div>
+                <!-- </mat-accordion > -->
+
+              </div>
+
+
+
+              <!-- </mat-accordion > -->
+
+
+            </div>
+            <!-- <button (click)="addText()">+</button> -->
+          </mat-accordion>
+        </ng-container>
+      </ng-container>
+
+      <!--              
+              <button class="submit-button" *ngIf="didSubmit == false" mat-mini-fab (click)="submit()">
+                  <mat-icon class="add-course-btn">done_outline</mat-icon>
+              </button> -->
+
+      <app-submit-button *ngIf="lessons.length > 0" class="submit-button" (click)="submit()"></app-submit-button>
+
+
+      <!-- <button class="submit-button" *ngIf="didSubmit == true" mat-mini-fab (click)="submit()"> -->
+      <!-- <mat-icon>redo</mat-icon> -->
+      <!-- <mat-icon>refresh</mat-icon> -->
+      <!-- </button> -->
+
+
+
+    </div>
+
+  </div>
+  <!-- cdkDrag [cdkDragFreeDragPosition]="dragPosition" -->
+  <!-- <div class="mid-container2">
+    <app-box-selector4 class="app-box-selector4" [_details]="details"></app-box-selector4>
+  </div> -->
+  <!-- <div class="column2"></div> -->
+  <!-- <h2>Column 2</h2>
+    <p>Some text..</p>
+      -->
+  <!-- <app-image-drop></app-image-drop> -->
+
+
+</div>
+</div>
